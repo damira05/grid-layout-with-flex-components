@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }  
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
@@ -12,6 +20,7 @@ body {
   .emoji h2 {
     margin: 0;
     border-bottom: 2px solid #ccc;
+    border-bottom-width: 100;
   }
   
   .emoji a {
@@ -26,43 +35,33 @@ body {
     font-size: 4rem;
   }
 
-  /*the grid properties to layout the emoji cards*/
+  /*grid properties to layout the emoji cards*/
 
- .emojis {
+  .emojis {
     display: grid;
+    gap: 15px;
     grid-template-columns: repeat(2, 400px);
-    grid-template-rows: repeat(2, 350px);
-    gap: 10px;
- }
-
-/*the flexbox properties to layout the content of the emoji cards*/
-
+    grid-template-rows: repeat(2, 350px)
+  }
+ 
+  /*flexbox properties to layout the content of the emoji cards*/
+  
  .emoji {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    text-align: start;
-    align-items: center;
-    justify-content: space-evenly;
- }
+    align-content: center;
+    flex-grow: 1;
+}
 
- h2 {
-    align-self: flex-start;
- }
-
- .emoji a {
-    align-self: stretch;
-    margin-bottom: 5px;
- }
-
- /*the emoji card content in proper order*/
+/*the emoji card content in proper order as per the image*/
 
 .emoji span {
     order: -1;
+    align-self: center;
 }
 
-
-
-
-
-
+.emoji a {
+    margin-top: auto;
+}
 
