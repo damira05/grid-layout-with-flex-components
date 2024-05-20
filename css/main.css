@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+  }
+  
+  .emoji {
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .emoji h2 {
+    margin: 0;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .emoji a {
+    text-decoration: none;
+    background-color: #781BAA;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .icon {
+    font-size: 4rem;
+  }
+
+  /*the grid properties to layout the emoji cards*/
+
+ .emojis {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(2, 350px);
+    gap: 10px;
+ }
+
+/*the flexbox properties to layout the content of the emoji cards*/
+
+ .emoji {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+ h2 {
+    align-self: flex-start;
+ }
+
+ .emoji a {
+    align-self: stretch;
+    margin-bottom: 5px;
+ }
+
+ /*the emoji card content in proper order*/
+
+.emoji span {
+    order: -1;
+}
+
+
+
+
+
+
+
